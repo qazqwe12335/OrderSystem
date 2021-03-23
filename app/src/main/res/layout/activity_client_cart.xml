@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientCartActivity">
+
+    <TextView
+        android:id="@+id/cartName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:drawableLeft="@drawable/ic_cart"
+        android:drawableTint="@color/black"
+        android:gravity="center"
+        android:text="購物車"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/carttitle_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/cartName"
+        android:background="#707070" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/total_view"
+        android:layout_below="@id/carttitle_view"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/cartbackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="6dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Cartrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#BAFFFFFF" />
+
+            <EditText
+                android:id="@+id/cart_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Cartrecyclerview"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cart_edittext_shape"
+                android:gravity="top"
+                android:hint="備註..."
+                android:maxEms="30"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/total_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/total_layout"
+        android:background="#707070" />
+
+    <LinearLayout
+
+        android:id="@+id/total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="6dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/timeCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/cart_text_shape"
+                android:gravity="center"
+                android:text="選擇取餐時間" />
+
+            <TextView
+                android:id="@+id/UserIfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="12dp"
+                android:drawableRight="@drawable/ic_baseline_edit_24"
+                android:drawableTint="#0038C5"
+                android:gravity="center"
+                android:text="改變送餐資訊"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="#0038C5" />
+
+            <TextView
+                android:id="@+id/totalQuanText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="總共 9 杯"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/totalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="總金額 : 100 元"
+                android:textColor="#FF7050"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_sendOrder_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:text="送出訂單" />
+
+    </LinearLayout>
+</RelativeLayout>

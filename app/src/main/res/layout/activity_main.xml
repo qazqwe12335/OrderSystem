@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:alpha="1.0"
+        android:src="@drawable/ice_main_background" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/back_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:paddingRight="20dp"
+        android:text="@string/title"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/main_icon_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/back_image"
+        android:layout_margin="40dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/storeicon" />
+
+    <!-- <androidx.cardview.widget.CardView
+         android:id="@+id/login_text_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:layout_margin="6dp"
+         android:elevation="8dp"
+         app:cardCornerRadius="6dp">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:orientation="vertical"
+             android:paddingTop="8dp"
+             android:paddingBottom="8dp">
+
+             <com.google.android.material.textfield.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <com.google.android.material.textfield.TextInputEditText
+
+                     android:id="@+id/user_account"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+                     android:background="@drawable/login_text_layout"
+                     android:hint="@string/login_account"
+                     android:textSize="16sp" />
+             </com.google.android.material.textfield.TextInputLayout>
+
+             <com.google.android.material.textfield.TextInputLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <com.google.android.material.textfield.TextInputEditText
+                     android:id="@+id/user_password"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp"
+                     android:background="@drawable/login_text_layout"
+                     android:hint="@string/login_password"
+                     android:textSize="16sp" />
+             </com.google.android.material.textfield.TextInputLayout>
+         </LinearLayout>
+     </androidx.cardview.widget.CardView>
+
+
+     <Button
+         android:id="@+id/login_btn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/login_text_layout"
+         android:layout_centerHorizontal="true"
+         android:layout_margin="12dp"
+         android:text="@string/login_btn"
+         android:textSize="14sp" />   -->
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/orderActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF6EF"
+    tools:context=".StoreOrderActivity">
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/menu_fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_margin="12dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:backgroundTint="#00AEFF"-->
+<!--        android:elevation="10dp"-->
+<!--        android:scaleType="center"-->
+<!--        android:src="@drawable/ic_baseline_build_24"-->
+<!--        android:translationZ="20dp"-->
+<!--        android:visibility="invisible"-->
+<!--        app:fabCustomSize="70dp"-->
+<!--        app:maxImageSize="40dp" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/snachbarlayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#FF6600"
+        android:elevation="10dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_add"
+        android:translationZ="20dp"
+        app:maxImageSize="40dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/checkOK_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/check"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00AEFF"
+        android:elevation="10dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_playlist_add_check"
+        android:translationZ="20dp"
+        app:maxImageSize="30dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/newOrder_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/checkOK_fab"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FF99"
+        android:elevation="10dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_baseline_check_24"
+        android:translationZ="20dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="目前訂單"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/storeGetrv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#FFF2DB"
+            android:elevation="8dp"
+            android:translationZ="1dp" />
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/snachbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

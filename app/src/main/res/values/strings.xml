@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">OrderSystem</string>
+
+    <string name="login_account">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_btn">登入</string>
+    <string name="register_btn">註冊</string>
+
+    <string name="login_edit_error">未輸入</string>
+    <string name="login_error">帳號或密碼輸入錯誤</string>
+
+    <string name="title">f a s t\no r d e r</string>
+
+    <string-array name="sugar">
+        <item>--選擇甜度--</item>
+        <item>正常糖</item>
+        <item>少糖</item>
+        <item>半糖</item>
+        <item>微糖</item>
+        <item>無糖</item>
+        <item>多酸</item>
+        <item>少酸</item>
+    </string-array>
+
+    <string-array name="ice">
+        <item>--選擇冰塊--</item>
+        <item>正常冰</item>
+        <item>少冰</item>
+        <item>微冰</item>
+        <item>去冰</item>
+        <item>常溫</item>
+        <item>溫飲</item>
+        <item>熱飲</item>
+    </string-array>
+</resources>
